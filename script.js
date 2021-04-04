@@ -4,6 +4,7 @@ function createInputField() {
     container.className = "input-field";
     
     const span = document.createElement("span");
+    span.className = "input_span"
     span.innerText = "Put name: ";
 
     const input = document.createElement("input");
@@ -69,7 +70,7 @@ function createListInputs(userName){
     buttoneEdit.className = "button_edit";
     buttoneEdit.addEventListener("click", function(){
         listRaw.buttoneEdit = createUserName(listRaw.innerText);
-        
+        listRaw.innerText = createUserName(listRaw.innerText)       
     });    
 
     const buttonRemove = createButton("Remove");
